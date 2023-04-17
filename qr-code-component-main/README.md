@@ -18,7 +18,7 @@ Your challenge is to build out this QR code component and get it looking as clos
 
 ### Links
 
-- Live Site URL: [Add live site URL here](front-end-mentor-e944nra4v-peanutbutterjlly.vercel.app)
+- Live Site URL: [See it live!](front-end-mentor-e944nra4v-peanutbutterjlly.vercel.app)
 
 ### Built with
 
