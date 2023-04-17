@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-gray: hsl(212, 45%, 89%);
+  --Grayish-blue: hsl(220, 15%, 55%);
+  --Dark-blue: hsl(218, 44%, 22%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--Dark-blue);
+  background-color: var(--Light-gray);
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-rows: 1fr 100px;
+}
+
+.card {
+  background-color: var(--White);
+  width: 20vw;
+  border-radius: 0.8rem;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+
+.header {
+  font-weight: 700;
+  color: var(--Dark-blue);
+  text-align: center;
+  margin: 0.3rem;
+  font-size: 1.5rem;
+  margin: 0 1rem;
+}
+
+.text {
+  font-size: 15px;
+  color: var(--Grayish-blue);
+  text-align: center;
+  margin: 0 1rem 1rem;
+  padding: 0 1rem 0.8rem;
+}
+
+.card img {
+  width: 90%;
+  border-radius: 0.8rem;
+  margin: 1rem;
+}
+
+@media (max-width: 375px) {
+  .card {
+    width: 80vw;
+  }
+
+  .card img {
+    margin-top: 1rem;
+  }
+
+  .header {
+    padding: 0 1.2rem;
+    font-size: 1.2rem;
+    margin: 0 0.5rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    text-align: center;
+    /* my content is off the screen cause of its width; help */
+  }
+}

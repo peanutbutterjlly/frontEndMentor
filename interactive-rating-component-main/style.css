@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: 'Overpass', sans-serif;
+  background-color: var(--very-dark-blue);
+  color: var(--white);
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  height: 100vh;
+}
+
+main {
+  width: 25vw;
+  height: 50vh;
+  background-color: var(--dark-blue);
+  border-radius: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0 2rem;
+}
+
+main > span:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: hsl(213, 19%, 28%);
+}
+
+p {
+  color: var(--light-grey);
+  line-height: 1.7;
+}
+
+p.nums {
+  display: flex;
+  justify-content: space-between;
+}
+
+.circle {
+  background-color: hsl(213, 19%, 28%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+}
+
+button {
+  background-color: var(--orange);
+  color: var(--white);
+  border: none;
+  border-radius: 1.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+main.thanks {
+  display: none;
+}
