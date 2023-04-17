@@ -29,6 +29,6 @@ Your challenge is to build out this QR code component and get it looking as clos
 
 ## Author
 
-- Website - [Add your name here](https://www.srios.net)
+- Website - [Steve Rios](https://www.srios.net)
 - Frontend Mentor - [@peanutbutterjlly](https://www.frontendmentor.io/profile/peanutbutterjlly)
 - Twitter - [@steve_developr](https://www.twitter.com/steve_developr)
