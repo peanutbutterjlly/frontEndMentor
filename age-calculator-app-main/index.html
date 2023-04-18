@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="static/css/style.css">
+
+  <title>Frontend Mentor | Age calculator app</title>
+</head>
+
+<body>
+
+  <main>
+    <form id="calendar" class="inputs" action="">
+      <div class="input">
+        <label for="day">Day</label>
+        <input type="text" id="day" name="day" min="1" max="31" placeholder="DD">
+      </div>
+      <div class="input">
+        <label for="month">Month</label>
+        <input type="text" id="month" name="month" min="1" max="12" placeholder="MM">
+      </div>
+      <div class="input">
+        <label for="year">Year</label>
+        <input type="text" id="year" name="year" min="1900" max="2023" placeholder="YYYY">
+      </div>
+    </form>
+
+    <div class="separator">
+      <hr>
+      <button type="submit" form="calendar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44">
+          <g fill="none" stroke="#FFF" stroke-width="2">
+            <path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44" />
+          </g>
+        </svg>
+      </button>
+    </div>
+
+    <div class="answer">
+      <div class="years"><span>--</span> years</div>
+      <div class="months"><span>--</span> months</div>
+      <div class="days"><span>--</span> days</div>
+    </div>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://srios.net" target="_blank">Steve Rios</a>.
+  </div>
+</body>
+<script src="/static/js/script.js"></script>
+
+</html>

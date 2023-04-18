@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
+@import url('attribution-styles.css');
+:root {
+  --purple: hsl(259, 100%, 65%);
+  --light-red: hsl(0, 100%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+}
+
+body {
+  background-color: var(--off-white);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-rows: 1fr 3rem;
+}
+
+main {
+  background: var(--white);
+  border-radius: 1.5rem 1.5rem 10rem 1.5rem;
+  box-shadow: 0 0 0.1rem 0 rgba(0, 0, 0, 0.1);
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  font-size: 2rem;
+  font-weight: 700;
+  width: 8rem;
+  border: 1px solid var(--light-grey);
+  border-radius: 0.5rem;
+  padding: 0.3rem 0.3rem 0.3rem 1rem;
+}
+
+hr {
+  border: none;
+  border-bottom: 1.5px solid var(--off-white);
+  margin: 2rem 0;
+  flex: 1;
+}
+
+.separator {
+  display: flex;
+  justify-content: flex-end;
+  width: 38rem;
+}
+
+button {
+  background: var(--purple);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.inputs {
+  color: var(--smokey-grey);
+  display: flex;
+  gap: 2rem;
+  font-weight: 700;
+}
+.input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.answer,
+.answer div span {
+  font-size: 5rem;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.answer div span {
+  color: var(--purple);
+}
