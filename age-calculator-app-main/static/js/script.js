@@ -18,7 +18,21 @@ function generateDate(event) {
   days.textContent = Math.abs(age.getUTCDate() - 1);
 }
 
-form.addEventListener('submit', generateDate);
+function isDateInThePast(date) {
+  const isFutureDate =  date > new Date();
+  if (isFutureDate) {
+    year.classList.add('error');
+  }
+  return isFutureDate;
+}
+
+function checkIfInputsAreNumbers(element) {
+  if (isNaN(element.value)) {
+    element.classList.add('error');
+  }
+  return !isNaN(element.value);
+}
+
 
 window.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
@@ -26,8 +40,10 @@ window.addEventListener('keydown', (e) => {
   }
 });
 
+form.addEventListener('submit', generateDate);
+
 form.addEventListener('reset', (e) => {
-  years.textContent = '--';
-  months.textContent = '--';
-  days.textContent = '--';
+  years.textContent = '- -';
+  months.textContent = '- -';
+  days.textContent = '- -';
 });
