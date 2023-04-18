@@ -9,10 +9,15 @@
   --very-dark-blue: hsl(216, 12%, 8%);
 }
 
-* {
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
@@ -24,27 +29,24 @@ body {
   align-items: center;
   justify-items: center;
   height: 100vh;
+  grid-template-rows: 1fr 75px;
 }
 
-main {
-  width: 25vw;
-  height: 50vh;
+.card {
+  background: radial-gradient(
+      circle at 50% 0%,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0) 30%
+    ),
+    var(--dark-blue);
+  width: 24vw;
+  height: 44vh;
   background-color: var(--dark-blue);
   border-radius: 1.3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 0 2rem;
-}
-
-main > span:first-child {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  background-color: hsl(213, 19%, 28%);
+  padding: 0 2.1rem;
 }
 
 p {
@@ -52,7 +54,7 @@ p {
   line-height: 1.7;
 }
 
-p.nums {
+.nums {
   display: flex;
   justify-content: space-between;
 }
@@ -67,6 +69,17 @@ p.nums {
   height: 3rem;
 }
 
+.active {
+  background: var(--medium-grey);
+  color: var(--white);
+}
+
+.nums > .circle:hover {
+  background-color: var(--orange);
+  color: var(--white);
+  cursor: pointer;
+}
+
 button {
   background-color: var(--orange);
   color: var(--white);
@@ -74,10 +87,52 @@ button {
   border-radius: 1.5rem;
   padding: 0.5rem 1rem;
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 400;
   cursor: pointer;
 }
 
-main.thanks {
+button:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+.thanks {
+  align-items: center;
+  text-align: center;
+}
+
+.rating {
+  background-color: hsl(213, 19%, 28%);
+  border-radius: 1.3rem;
+  padding: 0.4rem 1rem;
+  color: var(--orange);
+}
+
+.hide {
   display: none;
+}
+
+.show {
+  display: flex;
+}
+
+@media (max-width: 1024px) {
+  .card {
+    width: 40vw;
+    height: 60vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 80vw;
+    height: 60vh;
+  }
+}
+
+@media (max-width: 375px) {
+  .card {
+    width: 90vw;
+    height: 60vh;
+  }
 }
