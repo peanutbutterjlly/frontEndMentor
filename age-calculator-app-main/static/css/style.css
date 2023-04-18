@@ -72,6 +72,13 @@ button {
   gap: 0.4rem;
 }
 
+.input span {
+  color: var(--light-red);
+  font-size: 0.7rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
 .answer,
 .answer div span {
   font-size: 5rem;
@@ -82,4 +89,8 @@ button {
 
 .answer div span {
   color: var(--purple);
+}
+
+.hidden {
+  display: none;
 }
