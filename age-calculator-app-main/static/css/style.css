@@ -36,6 +36,7 @@ input {
   border: 1px solid var(--light-grey);
   border-radius: 0.5rem;
   padding: 0.3rem 0.3rem 0.3rem 1rem;
+  appearance: textfield;
 }
 
 hr {
