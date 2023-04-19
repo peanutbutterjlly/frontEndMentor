@@ -15,19 +15,19 @@
 
   <main>
     <form id="calendar" class="inputs" action="">
-      <div class="input">
+      <div class="input day">
         <label for="day">Day</label>
-        <input type="number" min="1" max="31" id="day" name="day" placeholder="DD">
+        <input type="text" id="day" name="day" placeholder="DD">
         <span class="hidden">Must be a valid day</span>
       </div>
-      <div class="input">
+      <div class="input month">
         <label for="month">Month</label>
-        <input type="number" min="1" max="12" id="month" name="month" placeholder="MM">
+        <input type="text" id="month" name="month" placeholder="MM">
         <span class="hidden">Must be a valid month</span>
       </div>
-      <div class="input">
+      <div class="input year">
         <label for="year">Year</label>
-        <input type="number" min="0" max="2023" id="year" name="year" placeholder="YYYY">
+        <input type="text" id="year" name="year" placeholder="YYYY">
         <span class="hidden">Must be in the past</span>
       </div>
     </form>
@@ -55,6 +55,6 @@
     Coded by <a href="https://srios.net" target="_blank">Steve Rios</a>.
   </div>
 </body>
-<script src="/static/js/script.js"></script>
+<script src="./static/js/script.js"></script>
 
 </html>

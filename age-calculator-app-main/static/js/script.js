@@ -13,9 +13,20 @@ function generateDate(event) {
   const today = new Date();
   const diff = today - date;
   const age = new Date(diff);
+
+  populateAnswer(age);
+}
+
+function populateAnswer(age) {
   years.textContent = Math.abs(age.getUTCFullYear() - 1970);
   months.textContent = Math.abs(age.getUTCMonth());
   days.textContent = Math.abs(age.getUTCDate() - 1);
+}
+
+function isEmptyFields(dayVal, monthVal, yearVal) {
+  if (dayVal == "" || monthVal == "" || yearVal == "") {
+    return
+  }
 }
 
 function isDateInThePast(date) {
