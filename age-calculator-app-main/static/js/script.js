@@ -37,50 +37,20 @@ function removeErrors(hide=true) {
   }
 }
 
-function generateDate(event) {
-  event.preventDefault();
-  removeErrors();
-  const date = new Date(year.value, month.value - 1, day.value);
-  const today = new Date();
-  const diff = today - date;
-  const age = new Date(diff);
-  if (isFutureDate(date) || isEmptyFields(day.value, month.value, year.value)) return false;
-  populateAnswer(age);
-}
-
-function populateAnswer(age) {
-  years.textContent = Math.abs(age.getUTCFullYear() - 1970);
-  months.textContent = Math.abs(age.getUTCMonth());
-  days.textContent = Math.abs(age.getUTCDate() - 1);
-}
-
 function isEmptyFields(dayVal, monthVal, yearVal) {
   const theyEmpty = !dayVal && !monthVal && !yearVal;
   if (theyEmpty) {
     removeErrors(false);
   }
-  console.log(theyEmpty)
   return theyEmpty;
 }
 
 function isFutureDate(date) {
   const isFutureDate =  date > new Date();
   if (isFutureDate) {
-    showYearError();
+    showError(year, yearLabel, yearError);
   }
   return isFutureDate;
-}
-
-function showDayError() {
-  day.classList.add('error');
-  dayLabel.classList.add('error');
-  dayError.classList.remove('hidden');
-}
-
-function showMonthError() {
-  month.classList.add('error');
-  monthLabel.classList.add('error');
-  monthError.classList.remove('hidden');
 }
 
 function showYearError() {
@@ -89,11 +59,56 @@ function showYearError() {
   yearError.classList.remove('hidden');
 }
 
-function checkIfInputsAreNumbers(element) {
-  if (isNaN(element.value)) {
-    element.classList.add('error');
+function showError(element, label, error) {
+  element.classList.add('error');
+  label.classList.add('error');
+  error.classList.remove('hidden');
+}
+
+function validateInput(element, label, error) {
+  if (isNaN(element.value) || !element.value) {
+    showError(element, label, error);
+    return true;
   }
-  return !isNaN(element.value);
+  return false;
+}
+
+function checkDayInput() {
+  const dayValue = day.value;
+  if (isNaN(dayValue) || dayValue < 1 || dayValue > 31) {
+    showError(day, dayLabel, dayError)
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function checkMonthInput() {
+  const monthValue = month.value;
+  if (isNaN(monthValue) || monthValue < 1 || monthValue > 12) {
+    showError(month, monthLabel, monthError);
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function generateDate(event) {
+  event.preventDefault();
+  removeErrors();
+  const date = new Date(year.value, month.value - 1, day.value);
+  const today = new Date();
+  const diff = today - date;
+  const age = new Date(diff);
+  if (isFutureDate(date) || isEmptyFields(day.value, month.value, year.value) || validateInput(day, dayLabel, dayError) || validateInput(month, monthLabel, monthError) || validateInput(year, yearLabel, yearError) || checkDayInput() || checkMonthInput())
+    return false;
+  populateAnswer(age);
+}
+
+function populateAnswer(age) {
+  years.textContent = Math.abs(age.getUTCFullYear() - 1970);
+  months.textContent = Math.abs(age.getUTCMonth());
+  days.textContent = Math.abs(age.getUTCDate() - 1);
 }
 
 // Event Listeners
@@ -105,7 +120,7 @@ window.addEventListener('keydown', (e) => {
 
 form.addEventListener('submit', generateDate);
 
-form.addEventListener('reset', (e) => {
+form.addEventListener('reset', () => {
   years.textContent = '- -';
   months.textContent = '- -';
   days.textContent = '- -';
