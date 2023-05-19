@@ -1,0 +1,149 @@
+:root {
+  --very-dark-blue-main-background: hsl(233, 47%, 7%);
+  --dark-desaturated-blue-card-background: hsl(244, 38%, 16%);
+  --soft-violet-accent: hsl(277, 64%, 61%);
+  --violet-hsl: 277, 64%, 61%;
+  --white-main-heading-stats: hsl(0, 0%, 100%);
+  --slightly-transparent-white-main-paragraph: hsla(0, 0%, 100%, 0.75);
+  --slightly-transparent-white-stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+html {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+}
+
+body {
+  background-color: var(--very-dark-blue-main-background);
+  color: var(--white-main-heading-stats);
+  display: grid;
+  grid-template-rows: 1fr 2rem;
+  place-items: center;
+}
+
+article {
+  background-color: var(--dark-desaturated-blue-card-background);
+  border-radius: 0.6rem;
+  display: flex;
+  overflow: hidden;
+  max-width: 1080px;
+  width: 60vw;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+a {
+  color: var(--soft-violet-accent);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  font-size: 1.1rem;
+}
+
+/* text */
+h1 span {
+  color: var(--soft-violet-accent);
+}
+
+.text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 1em 1em 1em 5em;
+  max-width: 50%;
+}
+
+.text > * {
+  width: 80%;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.nums {
+  display: flex;
+  flex-direction: column;
+}
+
+.nums > :first-child {
+  font-family: 'Lexend', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.grayish {
+  color: var(--slightly-transparent-white-stat-headings);
+}
+
+.nums > :last-child {
+  font-size: 0.7rem;
+}
+
+/* image */
+.img {
+  flex: 1;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(var(--violet-hsl), 0.8);
+  mix-blend-mode: multiply;
+}
+
+.mobile-image {
+  display: none;
+}
+
+@media (max-width: 1250px) {
+  article {
+    width: min(70vw, 1060px);
+  }
+}
+
+@media (max-width: 1075px) {
+  html {
+    font-size: 0.6rem;
+  }
+  article {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 625px) {
+  html {
+    font-size: 0.7rem;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text {
+    align-self: center;
+    justify-content: space-between;
+    order: 1;
+    padding: 3em 0;
+    text-align: center;
+    flex: 1;
+    gap: 1em;
+  }
+
+  .text > * {
+    width: 100%;
+  }
+}

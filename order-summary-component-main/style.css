@@ -1,0 +1,126 @@
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --pale-blue-hsl: 225, 100%, 94%;
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+  background: url('./static/images/pattern-background-desktop.svg'),
+    var(--pale-blue);
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-family: 'Red Hat Display', sans-serif;
+  display: grid;
+  place-items: center;
+  grid-template-rows: 1fr 2rem;
+}
+
+article {
+  background-color: var(--very-pale-blue);
+  box-shadow: 0px 5px 10px -10px var(--desaturated-blue);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 450px;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  color: var(--desaturated-blue);
+}
+
+h1 {
+  color: var(--dark-blue);
+  font-weight: 900;
+}
+
+button {
+  background-color: var(--bright-blue);
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0px 5px 10px -5px var(--desaturated-blue);
+  cursor: pointer;
+  color: var(--pale-blue);
+  font-weight: 700;
+  padding: 0.7em;
+}
+
+a:hover,
+a:focus {
+  filter: brightness(50%);
+}
+
+button:hover,
+button:focus {
+  opacity: 0.7;
+}
+
+.img-holder {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.cancel {
+  color: var(--desaturated-blue);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3rem;
+}
+
+.music {
+  display: flex;
+  gap: 1rem;
+}
+
+.details {
+  background-color: hsl(var(--pale-blue-hsl), 40%);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1rem;
+}
+
+.pricing {
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing > :first-child {
+  color: var(--dark-blue);
+  font-weight: 900;
+}
+
+@media (max-width: 455px) {
+  body {
+    background: url('./static/images/pattern-background-mobile.svg'),
+      var(--pale-blue);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  article {
+    width: 85vw;
+    margin: 2rem 0;
+    font-size: 0.9rem;
+  }
+
+  .container {
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .container {
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+}

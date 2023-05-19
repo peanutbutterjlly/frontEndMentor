@@ -32,7 +32,7 @@ body {
 
 .card {
   background-color: var(--White);
-  width: 20vw;
+  width: 300px;
   border-radius: 0.8rem;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   display: flex;
