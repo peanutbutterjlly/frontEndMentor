@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon-32x32.png">
   <!-- fonts -->
@@ -37,13 +36,23 @@
       </p>
 
       <div class="about">
-        <span class="name">
+        <span class="flex hidden" style="display: none;">
           <img class="avatar" src="static/images/avatar-michelle.jpg" alt="avatar">
           <span>
             <p class="--thick-gray">Michelle Appleton</p>
             <p class="date">28 Jun 2020</p>
           </span>
         </span>
+
+        <div class="flex" style="gap: 2rem;">
+          <span>SHARE</span>
+          <span class="flex">
+            <img src="static/images/icon-facebook.svg" alt="facebook">
+            <img src="static/images/icon-twitter.svg" alt="twiicon-twitter.svg">
+            <img src="static/images/icon-pinterest.svg" alt="pinicon-pinterest.svg">
+          </span>
+        </div>
+
 
         <button class="btn"><img src="static/images/icon-share.svg" alt=""></button>
       </div>
@@ -54,6 +63,15 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="https://srios.net">Steve Rios</a>.
   </footer>
+
+  <script>
+    const button = document.querySelector('.btn');
+    const nameSpan = document.querySelector('.name');
+    function handleClick(e) {
+    }
+
+    button.addEventListener('click', handleClick);
+  </script>
 </body>
 
 </html>

@@ -49,7 +49,17 @@ p {
   align-items: center;
 }
 
-.name {
+.about:has(span.flex.hidden) {
+  background-color: var(--Very-Dark-Grayish-Blue);
+  width: 115%;
+  padding: 1.2rem;
+  overflow: hidden;
+  margin-left: -1.4rem;
+  margin-right: -1.4rem;
+  margin-bottom: -1.4rem;
+}
+
+.flex {
   display: flex;
   gap: 0.8em;
 }
