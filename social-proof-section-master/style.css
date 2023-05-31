@@ -5,7 +5,6 @@
   --Light-Grayish-Magenta: hsl(300, 24%, 96%);
   --White: hsl(0, 0%, 100%);
 
-  --fontSize: 95%;
   font-family: 'League Spartan', sans-serif;
 }
 
@@ -14,10 +13,84 @@ body {
     url(static/images/bg-pattern-bottom-desktop.svg);
   background-position: top left, bottom right;
   background-repeat: no-repeat;
+  font-size: clamp(0.9rem, calc(0.4vw + 0.9rem), 1.2rem);
+  display: grid;
+  grid-template-rows: 1fr auto;
+  place-items: center;
+}
+
+main {
+  margin-block: 3rem;
+  margin-inline: auto;
+  width: min(1200px, 85%);
+}
+
+h1 {
+  color: var(--Very-Dark-Magenta);
+  font-weight: 700;
 }
 
 .topSection {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
+  gap: 7rem;
+  margin-block-end: 2rem;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottomSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card {
+  background-color: var(--Very-Dark-Magenta);
+  border-radius: 0.4rem;
+  color: var(--White);
+  flex: 1 300px;
+  font-weight: 500;
+  padding: 3rem 2rem;
+}
+
+.card.second {
+  margin-block-start: 1rem;
+  margin-block-end: -1rem;
+}
+
+.card.third {
+  margin-block-start: 2rem;
+  margin-block-end: -2rem;
+}
+
+.person {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-block-end: 2rem;
+}
+
+.person img {
+  border-radius: 100rem;
+  width: 3rem;
+}
+
+.buyer {
+  display: flex;
+  flex-direction: column;
+}
+
+.verified {
+  color: var(--Soft-Pink);
 }
