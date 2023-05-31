@@ -22,12 +22,14 @@ body {
 main {
   margin-block: 3rem;
   margin-inline: auto;
-  width: min(1200px, 85%);
+  width: min(1300px, 88%);
 }
 
 h1 {
   color: var(--Very-Dark-Magenta);
   font-weight: 700;
+  font-size: 3.5rem;
+  line-height: 1;
 }
 
 .topSection {
@@ -35,18 +37,21 @@ h1 {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   align-items: center;
   gap: 7rem;
-  margin-block-end: 2rem;
+  margin-block-end: 3rem;
 }
 
 .about {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  padding: 3rem;
 }
 
 .reviews {
   display: flex;
   flex-direction: column;
+  gap: 4rem;
+  padding-inline: 3rem;
 }
 
 .bottomSection {
@@ -61,7 +66,7 @@ h1 {
   color: var(--White);
   flex: 1 300px;
   font-weight: 500;
-  padding: 3rem 2rem;
+  padding: 2rem 2.2rem;
 }
 
 .card.second {
