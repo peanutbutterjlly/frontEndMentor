@@ -27,7 +27,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/peanutbutterjlly/frontEndMentor/tree/main/social-proof-section-master](https://github.com/peanutbutterjlly/frontEndMentor/tree/main/social-proof-section-master)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://steve-social-proof-section.netlify.app](https://steve-social-proof-section.netlify.app)
 
 ## My process
 
