@@ -1,0 +1,75 @@
+:root {
+  --cyanHsl: 179, 62%, 43%;
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+
+  --font-family: 'Karla', sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+}
+
+:where(html) {
+  font-family: var(--font-family);
+}
+
+.wrapper {
+  width: 90%;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 1fr 1fr auto;
+  place-items: center;
+}
+
+header {
+  font-weight: var(--font-weight-bold);
+  height: 100%;
+  padding: 4rem 1rem 0rem;
+}
+
+h1 {
+  color: hsl(var(--cyanHsl));
+}
+
+header span {
+  color: var(--bright-yellow);
+  display: block;
+  margin-block: 2rem;
+}
+
+header p {
+  color: var(--grayish-blue);
+  max-width: 60ch;
+  line-height: 1.9;
+}
+
+header > *:not(h1) {
+  font-size: 1.6rem;
+}
+
+/* get the last p in the header */
+header p:last-child {
+  margin-block-start: 1rem;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+}
+
+section {
+  padding: 3rem;
+  flex: 1 1 500px;
+}
+
+.month {
+  background-color: hsl(var(--cyanHsl));
+}
+
+.why {
+  background-color: hsl(var(--cyanHsl), 0.7);
+}
