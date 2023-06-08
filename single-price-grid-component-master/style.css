@@ -14,7 +14,7 @@
 }
 
 .wrapper {
-  width: 90%;
+  width: 100%;
 }
 
 body {
@@ -26,7 +26,7 @@ body {
 header {
   font-weight: var(--font-weight-bold);
   height: 100%;
-  padding: 4rem 1rem 0rem;
+  padding: 4rem 4rem 3rem;
 }
 
 h1 {
@@ -49,12 +49,12 @@ header > *:not(h1) {
   font-size: 1.6rem;
 }
 
-/* get the last p in the header */
 header p:last-child {
   margin-block-start: 1rem;
 }
 
 main {
+  color: var(--light-gray);
   display: flex;
   flex-wrap: wrap;
   height: 100%;
@@ -66,10 +66,72 @@ section {
   flex: 1 1 500px;
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+div.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100%;
+}
+
+div.wrapper p {
+  font-size: 1.7rem;
+}
+
 .month {
   background-color: hsl(var(--cyanHsl));
 }
 
+.price {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dollar {
+  font-size: 3rem;
+  font-weight: var(--font-weight-bold);
+}
+
 .why {
-  background-color: hsl(var(--cyanHsl), 0.7);
+  background-color: hsl(var(--cyanHsl), 0.8);
+}
+
+.btn {
+  background-color: var(--bright-yellow);
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 0.5rem hsla(0, 0%, 0%, 0.2);
+  color: white;
+  cursor: pointer;
+  font-weight: var(--font-weight-bold);
+  padding: 1rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+.btn:hover {
+  box-shadow: 0 0.5rem 0.5rem hsla(0, 0%, 0%, 0.4);
+  filter: hue-rotate(10deg);
+  transform: translate(0.2rem, -0.3rem);
+  transition: all 0.2s ease-in-out;
+}
+
+@media (max-width: 500px) {
+  :root {
+    font-size: 72%;
+  }
+  div.wrapper p {
+    font-size: 1.5rem;
+  }
+
+  .why {
+    font-size: 1.5rem;
+  }
 }
