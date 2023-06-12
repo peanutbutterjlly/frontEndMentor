@@ -14,7 +14,7 @@
 }
 
 body {
-  background-color: hsl(204, 43%, 93%);
+  background-color: var(--light-gray);
   display: grid;
   place-items: center;
   grid-template-rows: 1fr auto;
