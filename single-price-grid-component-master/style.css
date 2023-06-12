@@ -43,6 +43,7 @@ header span {
 }
 
 header p {
+  color: var(--grayish-blue);
   font-weight: var(--font-weight-regular);
   max-width: 60ch;
 }
