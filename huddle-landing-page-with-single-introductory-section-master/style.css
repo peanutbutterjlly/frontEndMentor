@@ -1,0 +1,130 @@
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+
+  --heading-font-family: 'Poppins', sans-serif;
+  --heading-font-weight: 400;
+  --heading-font-weight-bold: 600;
+  --body-font-family: 'Open Sans', sans-serif;
+  --body-font-weight: 400;
+
+  --background-img-desktop: url('./static/images/bg-desktop.svg');
+  --background-img-mobile: url('./static/images/bg-mobile.svg');
+}
+
+body {
+  background-image: var(--background-img-desktop);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--violet);
+  color: hsl(0, 0%, 100%);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  font-family: var(--body-font-family);
+  font-weight: var(--body-font-weight);
+  margin-inline: auto;
+  min-height: 100vh;
+  width: min(90%, 1300px);
+}
+
+h1 {
+  font-family: var(--heading-font-family);
+  font-weight: var(--heading-font-weight-bold);
+  font-size: 2rem;
+}
+
+header {
+  padding-top: 3rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+  align-items: center;
+}
+
+.icons {
+  color: white;
+  display: flex;
+  justify-content: end;
+  margin-block: 3rem;
+  padding-inline: 2rem;
+  gap: 1rem;
+}
+
+.icons > * {
+  border: 1px solid white;
+  border-radius: 900vw;
+  fill: hsl(0, 0%, 100%);
+  height: 2rem;
+  width: 2rem;
+  padding: 0.5rem;
+}
+
+.icons > *:hover {
+  background-color: var(--soft-magenta);
+  cursor: pointer;
+}
+
+.words {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding-inline: 2rem;
+}
+
+.words p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.btn {
+  background-color: white;
+  border-radius: 3rem;
+  border: none;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  color: var(--violet);
+  padding: 0.6rem 3rem;
+  align-self: start;
+}
+
+.btn:hover {
+  background-color: var(--soft-magenta);
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 849px) {
+  :root {
+    font-size: 90%;
+  }
+
+  body {
+    background-image: var(--background-img-mobile);
+    background-position: top;
+    background-size: contain;
+    width: 100%;
+  }
+
+  .logo {
+    padding-bottom: 5rem;
+  }
+
+  .icons {
+    justify-content: center;
+    margin-block: 2rem;
+  }
+
+  .words {
+    align-items: center;
+    text-align: center;
+    padding-inline: 0.4rem;
+  }
+
+  .btn {
+    align-self: center;
+  }
+}
