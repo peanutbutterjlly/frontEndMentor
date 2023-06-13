@@ -1,3 +1,5 @@
+const button = document.querySelector('#new-advice');
+
 async function getAdvice() {
   try {
     const response = await fetch('https://api.adviceslip.com/advice');
@@ -14,5 +16,7 @@ async function updateAdvice() {
   document.querySelector('.adviceText').innerHTML = `"${advice}"`;
   document.querySelector('.adviceId').innerHTML = id;
 }
+
+button.addEventListener('click', updateAdvice);
 
 updateAdvice();

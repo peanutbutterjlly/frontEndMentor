@@ -24,7 +24,12 @@
       Advice # <span class="adviceId"></span>
     </div>
     <p class="adviceText"></p>
-    <button class="dice" id="new-advice" onclick="updateAdvice()">
+    <picture>
+      <source media="(min-width: 600px)" srcset="./static/images/pattern-divider-desktop.svg">
+      <img src="./static/images/pattern-divider-mobile.svg" alt="divider">
+    </picture>
+    <img src="" />
+    <button class="dice" id="new-advice">
       <a href="#">
         <img src="./static/images/icon-dice.svg" alt="dice icon">
       </a>
@@ -33,7 +38,7 @@
 
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="https://srios.net" target="_blank" rel="norefferer noopener">Steve Rios</a>.
+    Coded by <a class="steve" href="https://srios.net" target="_blank" rel="norefferer noopener">Steve Rios</a>.
   </footer>
   <script src="./script.js"></script>
 </body>
