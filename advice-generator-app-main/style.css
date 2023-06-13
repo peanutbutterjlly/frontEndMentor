@@ -1,0 +1,36 @@
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+
+  --font-size-quote: 1.75rem;
+
+  --font-family: 'Manrope', sans-serif;
+  --font-weight: 800;
+}
+
+body {
+  background-color: var(--dark-blue);
+  color: var(--light-cyan);
+  font-family: var(--font-family);
+  display: grid;
+  grid-template-rows: 1fr auto;
+  place-items: center;
+  height: min(100%, 100vh);
+}
+
+main {
+  background-color: var(--dark-grayish-blue);
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+.dice {
+  background-color: var(--neon-green);
+  border: none;
+  border-radius: 99vw;
+  cursor: pointer;
+  padding: 0.5rem;
+}
