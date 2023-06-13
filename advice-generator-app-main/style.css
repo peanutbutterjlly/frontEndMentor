@@ -32,12 +32,19 @@ main {
   margin-inline: 1rem;
 }
 
+h1 {
+  display: inline;
+  font-size: 1.1rem;
+}
+
 picture {
   margin-inline: auto;
+  margin-bottom: 0.7rem;
 }
 
 .advice {
   color: var(--neon-green);
+  font-size: 1.1rem;
 }
 
 .adviceText {
