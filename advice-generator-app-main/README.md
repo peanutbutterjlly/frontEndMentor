@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/peanutbutterjlly/frontEndMentor/tree/main/advice-generator-app-main](https://github.com/peanutbutterjlly/frontEndMentor/tree/main/advice-generator-app-main)
+- Solution URL: [github](https://github.com/peanutbutterjlly/frontEndMentor/tree/main/advice-generator-app-main)
 - Live Site URL: [https://steve-advice-generator.netlify.app](https://steve-advice-generator.netlify.app)
 
 ## My process
