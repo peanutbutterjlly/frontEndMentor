@@ -4,12 +4,15 @@ const submit = document.querySelector('button');
 const form = document.querySelector('form');
 const main = document.querySelector('main');
 
+submit.disabled = true;
+
 choices.forEach((choice) => {
   choice.addEventListener('click', () => {
     choices.forEach((choice) => {
       choice.classList.remove('active');
     });
     choice.classList.add('active');
+    submit.disabled = false;
     answer.textContent = choice.dataset.choice;
   });
 });
