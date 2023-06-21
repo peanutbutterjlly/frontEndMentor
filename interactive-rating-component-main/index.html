@@ -56,7 +56,6 @@
       Submit
     </button>
   </form>
-
   <!-- Rating state end -->
 
   <!-- Thank you state start -->
@@ -113,11 +112,39 @@
   </main>
 
 
-  <div class="attribution">
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    Coded by <a href="https://srios.net" target="_blank">Steve Rios</a>.
+  </footer>
 </body>
-<script src="script.js"></script>
+<script>
+  const choices = document.querySelectorAll('.choice');
+  const answer = document.querySelector('.answer');
+  const submit = document.querySelector('button');
+  const form = document.querySelector('form');
+  const main = document.querySelector('main');
+
+  submit.disabled = true;
+
+  choices.forEach((choice) => {
+    choice.addEventListener('click', () => {
+      choices.forEach((choice) => {
+        choice.classList.remove('active');
+      });
+      choice.classList.add('active');
+      submit.disabled = false;
+      answer.textContent = choice.dataset.choice;
+    });
+  });
+
+  submit.addEventListener('click', (e) => {
+    e.preventDefault();
+    form.classList.add('hide');
+    main.classList.remove('hide');
+    main.classList.add('show');
+  });
+
+</script>
+<!-- <script src="script.js"></script> -->
 
 </html>
