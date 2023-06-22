@@ -1,18 +1,3 @@
-/* 
-## Typography
-
-### Body Copy
-
-- Font size (paragraph): 14px
-
-### Font
-
-- Family: [Montserrat](https://fonts.google.com/specimen/Montserrat)
-- Weights: 500, 700
-
-- Family: [Fraunces](https://fonts.google.com/specimen/Fraunces)
-- Weights: 700  */
-
 :root {
   --dark-cyan: hsl(158, 36%, 37%);
   --cream: hsl(30, 38%, 92%);
@@ -38,9 +23,8 @@ main {
   display: flex;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
-  min-height: 360px;
-  height: 40vh;
-  max-width: 35vw;
+  width: 634px;
+  height: 475px;
   border-radius: 0.8rem;
   color: var(--dark-grayish-blue);
 }
@@ -100,18 +84,29 @@ span:first-of-type {
 }
 
 .cart {
-  /* height: 2em;
-  width: 2em; */
   padding: 0;
   margin: 0;
   flex: 0;
 }
 
-@media (max-width: 740px) {
+.attribution {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+a.steve {
+  color: hotpink;
+}
+
+@media (max-width: 500px) {
   main {
     flex-direction: column;
-    min-width: 90vw;
-    height: 90vh;
+    width: 340px;
+    height: 610px;
   }
 
   .perfume {
