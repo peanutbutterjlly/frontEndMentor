@@ -15,9 +15,37 @@
   font-size: 1.25rem;
 }
 
+:where(main, footer) {
+  margin-inline: auto;
+  text-align: center;
+  width: min(90%, 1300px);
+}
+
+:where(.logo, .illustration) {
+  margin-inline: auto;
+}
+
 body {
   display: grid;
   place-items: center;
   grid-template-rows: 1fr auto;
   min-height: 100vh;
+}
+
+.socials {
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-block: 3rem;
+  padding-inline: 2rem;
+  gap: 1rem;
+}
+
+.socials > * {
+  border: 1px solid var(--gray);
+  border-radius: 900vw;
+  fill: hsl(0, 0%, 100%);
+  height: 2rem;
+  width: 2rem;
+  padding: 0.5rem;
 }
