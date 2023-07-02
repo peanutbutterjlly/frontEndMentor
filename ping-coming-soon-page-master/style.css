@@ -59,27 +59,49 @@ form {
   padding: 0.45rem;
 }
 
+.label {
+  display: none;
+}
+
+.inputAndError {
+  display: grid;
+  flex-grow: 4;
+}
+
 .email {
   border: 1px solid var(--pale-blue);
-  color: var(--pale-blue);
-  flex-grow: 3.5;
+  font-size: 1rem;
+  padding-left: 1rem;
+}
+
+.email:focus-visible.invalid {
+  border: 1px solid var(--light-red);
+  outline: none;
+}
+
+.error {
+  color: var(--light-red);
+  font-size: 0.6rem;
+  padding-left: 1rem;
+  text-align: left;
 }
 
 ::placeholder {
-  color: inherit;
-  font-size: 1rem;
+  color: var(--pale-blue);
+  font-size: 0.8rem;
   font-weight: var(--light);
-  padding: 0.45rem;
 }
 
 .btn {
   background-color: var(--blue);
   border: none;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  align-self: flex-start;
   color: white;
   flex: 1 9.8rem;
   font-size: 0.9rem;
   font-weight: var(--bold);
+  padding: 0.6rem;
 }
 
 .btn:hover,
@@ -115,8 +137,14 @@ footer {
 .socials > * {
   border: 1px solid var(--gray);
   border-radius: 900vw;
-  fill: hsl(0, 0%, 100%);
+  fill: var(--blue);
   height: 2rem;
   width: 2rem;
   padding: 0.5rem;
+}
+
+.socials > *:hover {
+  cursor: pointer;
+  fill: white;
+  background-color: var(--blue);
 }

@@ -27,12 +27,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./static/images/screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/peanutbutterjlly/frontEndMentor/tree/main/ping-coming-soon-page-master)
+- Live Site URL: [https://steve-ping-coming-soon.netlify.app/](https://steve-ping-coming-soon.netlify.app/)
 
 ## My process
 
