@@ -18,7 +18,7 @@
 :where(main, footer) {
   margin-inline: auto;
   text-align: center;
-  width: min(90%, 1300px);
+  width: min(90%, 33rem);
 }
 
 :where(.logo, .illustration) {
@@ -32,12 +32,73 @@ body {
   min-height: 100vh;
 }
 
+main {
+  color: var(--very-dark-blue);
+}
+
+h1 {
+  color: var(--gray);
+  font-weight: var(--light);
+  margin-top: 3.3rem;
+}
+
+header {
+  margin-bottom: 2.6rem;
+}
+
+.sub {
+  font-size: 1rem;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.pill {
+  border-radius: 10rem;
+  padding: 0.45rem;
+}
+
+.email {
+  border: 1px solid var(--pale-blue);
+  color: var(--pale-blue);
+  flex-grow: 3.3;
+}
+
+::placeholder {
+  color: inherit;
+  font-size: 1rem;
+  font-weight: var(--light);
+  padding: 0.45rem;
+}
+
+.btn {
+  background-color: var(--blue);
+  border: none;
+  color: white;
+  flex: 1 9.8rem;
+  font-size: 0.9rem;
+  font-weight: var(--bold);
+}
+
+footer {
+  color: var(--gray);
+  font-size: 0.7rem;
+  margin-block-end: 2.6rem;
+}
+
+.bold {
+  color: var(--very-dark-blue);
+  font-weight: var(--bold);
+}
+
 .socials {
   color: white;
   display: flex;
   justify-content: center;
-  margin-block: 3rem;
-  padding-inline: 2rem;
   gap: 1rem;
 }
 
