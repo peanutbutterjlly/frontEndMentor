@@ -25,13 +25,6 @@
   margin-inline: auto;
 }
 
-body {
-  display: grid;
-  place-items: center;
-  grid-template-rows: 1fr auto;
-  min-height: 100vh;
-}
-
 main {
   color: var(--very-dark-blue);
 }
@@ -43,7 +36,11 @@ h1 {
 }
 
 header {
-  margin-bottom: 2.6rem;
+  margin-bottom: 2.2rem;
+}
+
+.logo {
+  margin-top: 4.1rem;
 }
 
 .sub {
@@ -65,7 +62,7 @@ form {
 .email {
   border: 1px solid var(--pale-blue);
   color: var(--pale-blue);
-  flex-grow: 3.3;
+  flex-grow: 3.5;
 }
 
 ::placeholder {
@@ -78,21 +75,34 @@ form {
 .btn {
   background-color: var(--blue);
   border: none;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   color: white;
   flex: 1 9.8rem;
   font-size: 0.9rem;
   font-weight: var(--bold);
 }
 
+.btn:hover,
+.btn:focus {
+  cursor: pointer;
+  background-color: var(--pale-blue);
+}
+
 footer {
   color: var(--gray);
   font-size: 0.7rem;
   margin-block-end: 2.6rem;
+  margin-top: 1.22rem;
 }
 
 .bold {
   color: var(--very-dark-blue);
   font-weight: var(--bold);
+}
+
+.illustration {
+  margin-top: 4.9rem;
+  margin-bottom: 3.7rem;
 }
 
 .socials {
