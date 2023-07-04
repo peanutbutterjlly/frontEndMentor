@@ -1,0 +1,26 @@
+:root {
+  --desaturated-red: hsl(0, 93%, 68%);
+  --soft-red: hsl(0, 93%, 68%);
+  --dark-grayish-red: hsl(0, 6%, 24%);
+
+  --linear-135deg: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  --linear-135deg-2: linear-gradient(
+    135deg,
+    hsl(0, 80%, 86%),
+    hsl(0, 74%, 74%)
+  );
+
+  --font-family: 'Josefin Sans', sans-serif;
+  --font-light: 300;
+  --font-regular: 400;
+  --font-semibold: 600;
+}
+
+body {
+  background-color: var(--linear-135deg);
+  font-family: var(--font-family);
+  display: grid;
+  place-items: center;
+  grid-template-rows: 1fr auto;
+  min-height: 100vh;
+}
