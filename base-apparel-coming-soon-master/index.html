@@ -35,10 +35,10 @@
         Hello fellow shoppers! We're currently building our new fashion store.
         Add your email below to stay up-to-date with announcements and our launch deals.
       </p>
-      <form class="inputs">
-        <input aria-label="Input Field Label" type="email" name="email" placeholder="Email Address" class="input"
-          id="email">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+      <form class="inputs" action="#">
+        <input aria-label="Email Address" type="email" name="email" placeholder="Email Address" class="input" id="email"
+          required>
+        <svg class="error hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
           <g fill="none" fill-rule="evenodd">
             <circle cx="12" cy="12" r="12" fill="#F96464" />
             <path fill="#FFF" fill-rule="nonzero"
@@ -46,7 +46,7 @@
           </g>
         </svg>
         <button type="submit">
-          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20">
+          <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="12" height="20">
             <path fill="none" stroke="#FFF" stroke-width="2" d="M1 1l8.836 8.836L1 18.671" />
           </svg>
         </button>

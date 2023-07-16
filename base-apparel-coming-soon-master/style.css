@@ -59,6 +59,35 @@ form {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+}
+
+input::placeholder {
+  color: var(--desaturated-red);
+  opacity: 0.5;
+}
+
+input {
+  border: 1px solid var(--desaturated-red);
+  border-radius: 2rem;
+  overflow: hidden;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+
+.error {
+  margin-left: -3rem;
+  margin-right: -55px;
+  position: relative;
+  left: -5rem;
+}
+
+button {
+  background: var(--linear-135deg-2);
+  border: 0.1px solid var(--desaturated-red);
+  border-radius: 2rem;
+  margin-left: 1.1rem;
+  padding: 0.85rem 1.8rem;
 }
 
 .attribution {
