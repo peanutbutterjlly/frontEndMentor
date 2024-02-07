@@ -52,6 +52,7 @@
             </svg>
           </button>
         </div>
+        <p class="validation hidden">Please provide a valid email</p>
       </form>
     </div>
   </main>
@@ -64,25 +65,30 @@
   </footer>
 </body>
 <script>
-  const emailInput = document.querySelector('#email');
-  const error = document.querySelector('.error');
-  const submit = document.querySelector('button');
   const form = document.querySelector('form');
+  const emailInput = form.querySelector('#email');
+  const error = form.querySelector('.error');
+  const submit = form.querySelector('button');
+  const inputWrapper = form.querySelector('.inputs');
+  const validationMessage = form.querySelector('.validation');
 
-  /**
-   * Function to validate an email input and handle the display of an error message if the input is invalid.
-   * @param {HTMLInputElement} inputElement - The input element for the email address.
-   * @param {HTMLElement} errorMessageElement - The element to display the error message.
-   */
   function validateEmail(inputElement, errorMessageElement) {
     errorMessageElement.style.visibility = 'hidden';
+    inputWrapper.classList.remove('invalid');
+    validationMessage.classList.remove('hidden');
 
     if (!inputElement.checkValidity()) {
+      // Display error message
       errorMessageElement.classList.remove('hidden');
       errorMessageElement.style.visibility = 'visible';
+      inputWrapper.classList.add('invalid');
+      validationMessage.classList.remove('hidden');
     } else {
+      // Clear error message
       errorMessageElement.classList.add('hidden');
+      validationMessage.classList.add('hidden');
       alert('Thank you for subscribing!');
+      form.reset();
     }
   }
 

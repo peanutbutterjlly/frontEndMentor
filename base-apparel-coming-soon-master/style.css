@@ -58,6 +58,7 @@ h1 {
 
 form {
   accent-color: var(--desaturated-red);
+  margin-block: 1.2rem;
 }
 
 .inputs {
@@ -66,6 +67,10 @@ form {
   overflow: hidden;
   justify-content: space-between;
   display: flex;
+}
+
+.inputs.invalid {
+  border: 2px solid var(--soft-red);
 }
 
 input::placeholder {
@@ -95,10 +100,17 @@ button {
   background: var(--linear-135deg-2);
   box-shadow: 1px 2px 4px var(--desaturated-red);
   border: 0;
-  /* border-left: 0.1px solid var(--desaturated-red); */
   border-radius: 2rem;
   cursor: pointer;
   padding: 0.85rem 1.8rem;
+}
+
+form p {
+  color: var(--soft-red);
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  padding-inline-start: 1rem;
+  text-align: left;
 }
 
 .attribution {
