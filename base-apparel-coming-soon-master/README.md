@@ -30,12 +30,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./design/screenshot.webp)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/peanutbutterjlly/frontEndMentor/tree/main/base-apparel-coming-soon-master](https://github.com/peanutbutterjlly/frontEndMentor/tree/main/base-apparel-coming-soon-master)
+- Live Site URL: [https://steve-base-apparel-comming-soon.netlify.app/](https://steve-base-apparel-comming-soon.netlify.app/)
 
 ## My process
 

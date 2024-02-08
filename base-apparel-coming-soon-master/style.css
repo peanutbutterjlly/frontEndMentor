@@ -161,7 +161,6 @@ form p {
     max-width: 65%;
     margin-inline: auto;
     margin-block: 0;
-    overflow-y: scroll;
 
     & p {
       font-size: 0.9rem;
@@ -170,6 +169,5 @@ form p {
 
   footer {
     grid-area: attr;
-    overflow-y: scroll;
   }
 }
