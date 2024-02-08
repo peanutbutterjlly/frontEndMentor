@@ -30,9 +30,13 @@
 
 :where(p, h1, h2, h3, h4, h5, h6) {
   overflow-wrap: break-word;
+  hyphens: auto;
 }
 
-#root,
-#__next {
-  isolation: isolate;
+:where(p) {
+  text-wrap: pretty;
+}
+
+:where(h1, h2, h3, h4, h5, h6) {
+  text-wrap: balance;
 }

@@ -70,7 +70,7 @@ form {
 }
 
 .inputs.invalid {
-  border: 2px solid var(--soft-red);
+  outline: 2px solid var(--soft-red);
 }
 
 input::placeholder {
@@ -118,19 +118,58 @@ form p {
   text-align: center;
 }
 
-@media (min-width: 610px) {
+@media (min-width: 62.5rem) {
   html {
     background-image: url(./static/images/bg-pattern-desktop.svg);
     background-repeat: no-repeat;
     background-size: cover;
   }
 
-  .hero img {
-    width: 610px;
-    object-fit: cover;
+  body {
+    display: grid;
+    grid-template-areas:
+      'logo img'
+      'form img'
+      'attr img';
+    max-height: 100vh;
+  }
+
+  header {
+    grid-area: logo;
+  }
+
+  .hero {
+    grid-area: img;
+    & img {
+      height: 100vh;
+    }
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-inline: revert;
+  }
+
+  main {
+    grid-area: form;
+    display: grid;
+    align-items: center;
   }
 
   .text {
     text-align: left;
+    max-width: 65%;
+    margin-inline: auto;
+    margin-block: 0;
+    overflow-y: scroll;
+
+    & p {
+      font-size: 0.9rem;
+    }
+  }
+
+  footer {
+    grid-area: attr;
+    overflow-y: scroll;
   }
 }
