@@ -1,0 +1,55 @@
+/* The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px */
+
+:root {
+  --nutmeg: hsl(14, 45%, 36%);
+  --dark-raspberry: hsl(332, 51%, 32%);
+
+  --white: hsl(0, 0%, 100%);
+  --rose-white: hsl(330, 100%, 98%);
+  --eggshell: hsl(30, 54%, 90%);
+  --light-grey: hsl(30, 18%, 87%);
+  --wenge-brown: hsl(30, 10%, 34%);
+  --dark-charcoal: hsl(24, 5%, 18%);
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Young Serif', serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p {
+  font-family: 'Outfit', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p.bold {
+  font-weight: 600;
+}
+
+p.bolder {
+  font-weight: 700;
+}
+
+body {
+  background-color: var(--eggshell);
+  display: grid;
+  place-items: center;
+}
+
+main {
+  background-color: var(--white);
+  padding: 2rem;
+  width: min(55rem, 90%);
+}
+
+img {
+  margin-inline: -2rem;
+}
