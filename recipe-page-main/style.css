@@ -13,6 +13,8 @@
   --light-grey: hsl(30, 18%, 87%);
   --wenge-brown: hsl(30, 10%, 34%);
   --dark-charcoal: hsl(24, 5%, 18%);
+
+  --padding: 2.2rem;
 }
 
 h1,
@@ -46,10 +48,20 @@ body {
 
 main {
   background-color: var(--white);
-  padding: 2rem;
-  width: min(55rem, 90%);
+  border-radius: 24px;
+  margin-top: 9rem;
+  width: min(45rem, 90%);
+}
+
+.img-wrapper {
+  padding-inline: var(--padding);
+  padding-block-start: var(--padding);
 }
 
 img {
-  margin-inline: -2rem;
+  border-radius: 16px;
+}
+
+.wrapper {
+  padding: var(--padding);
 }
