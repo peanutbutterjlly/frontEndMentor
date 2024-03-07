@@ -17,6 +17,22 @@
   --padding: 2.2rem;
 }
 
+.attribution {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: deeppink;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 h1,
 h2,
 h3 {
@@ -25,18 +41,11 @@ h3 {
   font-style: normal;
 }
 
-p {
-  font-family: 'Outfit', sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-p.bold {
+.bold {
   font-weight: 600;
 }
 
-p.bolder {
+.bolder {
   font-weight: 700;
 }
 
@@ -49,7 +58,7 @@ body {
 main {
   background-color: var(--white);
   border-radius: 24px;
-  margin-top: 9rem;
+  margin: 9rem auto;
   width: min(45rem, 90%);
 }
 
@@ -64,4 +73,35 @@ img {
 
 .wrapper {
   padding: var(--padding);
+}
+
+:where(p, li) {
+  font-size: 1.1111111111111112rem;
+  color: var(--wenge-brown);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.intro {
+  font-size: 0.999999rem;
+  font-weight: 300;
+}
+
+.prep {
+  background-color: var(--rose-white);
+  border-radius: 20px;
+  padding: 20px;
+  margin-block: 30px;
+
+  & p {
+    font-size: 1.25rem;
+    color: var(--dark-raspberry);
+    margin-bottom: 15px;
+  }
+
+  & li:not(:last-child) {
+    padding-bottom: 16px;
+  }
 }
