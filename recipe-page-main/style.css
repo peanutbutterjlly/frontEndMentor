@@ -35,6 +35,9 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  background-color: var(--eggshell);
+  display: grid;
+  place-items: center;
 }
 
 h1,
@@ -65,12 +68,6 @@ li:not(:last-child) {
 
 .bolder {
   font-weight: 700;
-}
-
-body {
-  background-color: var(--eggshell);
-  display: grid;
-  place-items: center;
 }
 
 main {
@@ -127,4 +124,34 @@ h1 {
 :where(.ingredients, .instructions) {
   border-bottom: 1px solid var(--light-grey);
   padding-bottom: 23px;
+}
+
+.nutrition-wrapper {
+  margin-top: 30px;
+}
+
+.nut-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 0.1rem solid var(--light-grey);
+  padding-bottom: 10px;
+  font-size: 19px;
+}
+
+.nut-card:not(:first-child) {
+  margin-top: 10px;
+}
+
+.label {
+  color: var(--wenge-brown);
+  margin-left: 33px;
+}
+
+.amt {
+  color: var(--nutmeg);
+  font-weight: 700;
+}
+
+ol li p {
+  margin-left: 23px;
 }
